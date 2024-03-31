@@ -6,9 +6,9 @@
     <td class="tw-w-[107px]">
         <div class="tw-flex tw-flex-col">
             <button data-bs-toggle="modal" data-bs-target="#addEditUserModal"
+                wire:click="$dispatch('get-user-id', { id: {{ $user->id }} })"
                 class="btn btn-success btn-sm tw-text-white tw-w-[115px] tw-mb-1" type="button">
-                <i class="fa-solid tw-mr-1 fa-pen-to-square"
-                    wire:click="edit"></i>
+                <i class="fa-solid tw-mr-1 fa-pen-to-square"></i>
                 Edit
             </button>
             <button class="btn btn-secondary btn-sm tw-text-white tw-w-[115px] tw-mb-1">

@@ -4,6 +4,7 @@ namespace Modules\IAM\Livewire\User;
 
 use Livewire\Component;
 use Modules\IAM\app\Models\User;
+use Livewire\Attributes\On;
 
 class Record extends Component
 {
@@ -21,8 +22,8 @@ class Record extends Component
         $this->dispatch('deleted-user',['message'=>'User deleted successfully']);
     }
     
-    
+    #[On('get-user-id')]
     public function edit(){
-        $this->dispatch('editUser', ['userId' => $this->user->id])->to('user.create-edit');
+        $this->dispatch('editUser', ['userId' => $this->user->id])->to(CreateEdit::class);
     }
 }

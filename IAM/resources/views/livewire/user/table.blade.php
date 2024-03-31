@@ -33,6 +33,14 @@
             });
         })
 
+        window.addEventListener('open-modal', event => {
+            var modalElement = document.getElementById('addEditUserModal');
+            var modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (modalInstance) {
+                modalInstance.show();
+            }
+        });
+
         window.addEventListener('deleted-user', event => {
             PNotify.alert({
                 text: event.__livewire.params[0].message,

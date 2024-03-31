@@ -41,14 +41,13 @@ class CreateEdit extends Component
         }
     }
 
-    #[On('editUser')]
-    public function handleEditUser($userId)
-    {
+    #[On('editUser')]    
+    public function showUserInfo($userId) {
+        $this->dispatch('open-modal'); 
         $this->modalTitle = 'Edit Member';
+        $user = $this->userRepository->find($userId);
+        // dd($user->toArray());
+        // $this->createForm = new CreateForm($user);
     }
-    
-    public function edit()
-    {
 
-    }
 }
