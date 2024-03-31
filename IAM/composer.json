@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/iam",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\IAM\\": "",
+            "Modules\\IAM\\App\\": "app/",
+            "Modules\\IAM\\Database\\Factories\\": "database/factories/",
+            "Modules\\IAM\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\IAM\\Tests\\": "tests/"
+        }
+    }
+}
